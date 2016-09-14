@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3BAD49DA-D5D1-47F2-BB0A-EE91E0E5639F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Xu.Framework</RootNamespace>
+    <AssemblyName>Xu.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Async\ITaskManager.cs" />
+    <Compile Include="Async\Task.cs" />
+    <Compile Include="Async\TaskManager.cs" />
+    <Compile Include="Core\XuException.cs" />
+    <Compile Include="Core\XuMath.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\GameServiceContainerExtensions.cs" />
+    <Compile Include="Extensions\Int32Extensions.cs" />
+    <Compile Include="Extensions\SpriteFontExtensions.cs" />
+    <Compile Include="Generators\IntegerGenerator.cs" />
+    <Compile Include="Generators\PerlinNoise.cs" />
+    <Compile Include="Generators\RandomGenerator.cs" />
+    <Compile Include="Generators\RandomVectorGenerator.cs" />
+    <Compile Include="Genres\VoxelBased\BasicChunkBuffersBuilder.cs" />
+    <Compile Include="Genres\VoxelBased\BasicChunkGenerator.cs" />
+    <Compile Include="Genres\VoxelBased\Block.cs" />
+    <Compile Include="Genres\VoxelBased\BlockFaces.cs" />
+    <Compile Include="Genres\VoxelBased\BlockType.cs" />
+    <Compile Include="Genres\VoxelBased\Chunk.cs" />
+    <Compile Include="Genres\VoxelBased\ChunkManager.cs" />
+    <Compile Include="Genres\VoxelBased\ChunkState.cs" />
+    <Compile Include="Genres\VoxelBased\DeferredChunkRenderer.cs" />
+    <Compile Include="Genres\VoxelBased\IChunkGenerator.cs" />
+    <Compile Include="Genres\VoxelBased\IChunkManager.cs" />
+    <Compile Include="Genres\VoxelBased\IChunkStore.cs" />
+    <Compile Include="Genres\VoxelBased\NullChunkStore.cs" />
+    <Compile Include="Genres\VoxelBased\PlayerCameraController.cs" />
+    <Compile Include="Genres\VoxelBased\VoxelTraverser.cs" />
+    <Compile Include="Genres\VoxelBased\WorldGeneration\BasicVoxelClassifier.cs" />
+    <Compile Include="Genres\VoxelBased\WorldGeneration\BasicVoxelProcessor.cs" />
+    <Compile Include="Genres\VoxelBased\WorldGeneration\IVoxelClassifier.cs" />
+    <Compile Include="Genres\VoxelBased\WorldGeneration\IVoxelProcessor.cs" />
+    <Compile Include="Genres\VoxelBased\WorldGeneration\ModularChunkGenerator.cs" />
+    <Compile Include="Genres\VoxelBased\WorldGeneration\VoxelData.cs" />
+    <Compile Include="Graphics\Cameras\BasicCamera.cs" />
+    <Compile Include="Graphics\Cameras\ICamera.cs" />
+    <Compile Include="Graphics\Deferred\DeferredClearEffect.cs" />
+    <Compile Include="Graphics\Deferred\DeferredCombineEffect.cs" />
+    <Compile Include="Graphics\Deferred\DeferredGeometryEffect.cs" />
+    <Compile Include="Graphics\Deferred\DirectionalLightEffect.cs" />
+    <Compile Include="Graphics\Deferred\PointLightEffect.cs" />
+    <Compile Include="Graphics\Deferred\SsaoEffect.cs" />
+    <Compile Include="Graphics\GraphicsHelper.cs" />
+    <Compile Include="Graphics\Primitives.cs" />
+    <Compile Include="Graphics\SimpleEffect.cs" />
+    <Compile Include="Graphics\TextureAtlas\ITextureAtlasCoordinateProvider.cs" />
+    <Compile Include="Graphics\TextureAtlas\TiledTextureAtlasCoordinateProvider.cs" />
+    <Compile Include="Graphics\TextureAtlas\TiledTextureAtlasSpecification.cs" />
+    <Compile Include="Graphics\UI\Controls\Box.cs" />
+    <Compile Include="Graphics\UI\Controls\Button.cs" />
+    <Compile Include="Graphics\UI\Controls\CheckBox.cs" />
+    <Compile Include="Graphics\UI\Controls\Container.cs" />
+    <Compile Include="Graphics\UI\Controls\Control.cs" />
+    <Compile Include="Graphics\UI\Controls\Image.cs" />
+    <Compile Include="Graphics\UI\Controls\Label.cs" />
+    <Compile Include="Graphics\UI\Controls\Panel.cs" />
+    <Compile Include="Graphics\UI\Controls\ProgressBar.cs" />
+    <Compile Include="Graphics\UI\Controls\RadioButton.cs" />
+    <Compile Include="Graphics\UI\Controls\TextBox.cs" />
+    <Compile Include="Graphics\UI\Controls\Texture.cs" />
+    <Compile Include="Graphics\UI\Controls\ViewportContainer.cs" />
+    <Compile Include="Graphics\UI\ControlVisualizer.cs" />
+    <Compile Include="Graphics\UI\IControlVisualizer.cs" />
+    <Compile Include="Graphics\UI\Layout\Alignment.cs" />
+    <Compile Include="Graphics\UI\Layout\Bounds.cs" />
+    <Compile Include="Graphics\UI\Layout\Offset.cs" />
+    <Compile Include="Graphics\UI\UIElement.cs" />
+    <Compile Include="Graphics\UI\UIEvent.cs" />
+    <Compile Include="Graphics\UI\UIEventArgs.cs" />
+    <Compile Include="Graphics\UI\UIManager.cs" />
+    <Compile Include="Graphics\VertexFormats\VertexPositionNormalColor.cs" />
+    <Compile Include="Graphics\VertexFormats\VertexPositionNormalTextureColor.cs" />
+    <Compile Include="Input\BasicCameraController.cs" />
+    <Compile Include="Input\ICameraController.cs" />
+    <Compile Include="Input\IKeyboardManager.cs" />
+    <Compile Include="Input\IKeyConsumer.cs" />
+    <Compile Include="Input\IMouseManager.cs" />
+    <Compile Include="Input\KeyboardBuffer.cs" />
+    <Compile Include="Input\KeyboardBufferItem.cs" />
+    <Compile Include="Input\KeyboardManager.cs" />
+    <Compile Include="Input\KeyboardManagerMode.cs" />
+    <Compile Include="Input\KeyEvent.cs" />
+    <Compile Include="Input\KeyEventArgs.cs" />
+    <Compile Include="Input\KeyType.cs" />
+    <Compile Include="Input\MouseEventMapping.cs" />
+    <Compile Include="Input\MouseManager.cs" />
+    <Compile Include="Input\MouseManagerMode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Types\IntVector3.cs" />
+    <Compile Include="Windows\Hook.cs" />
+    <Compile Include="Windows\Win32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.5.1.1679, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
